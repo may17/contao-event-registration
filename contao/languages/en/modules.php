@@ -19,3 +19,4 @@ $GLOBALS['TL_LANG']['FMD'][EventRegistrationCancelController::TYPE] = ['Event re
 $GLOBALS['TL_LANG']['FMD'][EventRegistrationListController::TYPE] = ['Event registration list', 'Lists current registrations for an event.'];
 $GLOBALS['TL_LANG']['FMD'][EventRegistrationCalendarController::TYPE] = ['Event registration calendar', 'Provides a calendar where one can select multiple events for registration.'];
 $GLOBALS['TL_LANG']['FMD'][MemberEventRegistrationsController::TYPE] = ['Event registrations', 'Lists current registrations for a member.'];
+$GLOBALS['TL_LANG']['MOD']['tl_event_registration'] = 'Registrations';
