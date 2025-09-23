@@ -48,7 +48,7 @@ class ChildRecordCallbackListener
             $icon = 'unpublished.svg';
             $alt = $this->translator->trans('tl_event_registration.cancelled.0', [], 'contao_tl_event_registration');
         } elseif ($row['waiting']) {
-            $icon = 'news.svg';
+            $icon = 'bundles/contaoeventregistration/clock-alert.svg';
             $alt = $this->translator->trans('tl_event_registration.waiting.0', [], 'contao_tl_event_registration');
         } elseif ($row['confirmed']) {
             $icon = 'visible.svg';
