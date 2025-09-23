@@ -40,12 +40,12 @@ class ChildRecordCallbackListener
             $label = StringUtil::substr($this->flatten($formData), 128);
         }
 
-        $icon = 'visible_.svg';
+        $icon = 'invisible.svg';
         $alt = '';
         $attributes = ' style="float:left; margin-right:0.3em;"';
 
         if ($row['cancelled']) {
-            $icon = 'unpublished.svg';
+            $icon = 'error.svg';
             $alt = $this->translator->trans('tl_event_registration.cancelled.0', [], 'contao_tl_event_registration');
         } elseif ($row['waiting']) {
             $icon = 'bundles/contaoeventregistration/clock-alert.svg';
