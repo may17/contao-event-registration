@@ -14,7 +14,6 @@ use Contao\CoreBundle\DependencyInjection\Attribute\AsFrontendModule;
 use Contao\FrontendUser;
 use Contao\ModuleModel;
 use Contao\Template;
-use Doctrine\DBAL\Connection;
 use InspiredMinds\ContaoEventRegistration\EventRegistration;
 use InspiredMinds\ContaoEventRegistration\EventRegistration\LabelBuilder;
 use InspiredMinds\ContaoEventRegistration\EventsModuleProxy;
@@ -35,7 +34,6 @@ class MemberEventRegistrationsController extends AbstractFrontendModuleControlle
         private readonly TokenStorageInterface $tokenStorage,
         private readonly EventRegistration $eventRegistration,
         private readonly LabelBuilder $labelBuilder,
-        private readonly Connection $db,
         private readonly EventsModuleProxy $eventsModuleProxy,
     ) {
     }
