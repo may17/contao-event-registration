@@ -1,0 +1,9 @@
+<?php 
+
+$this->extend('form_backend');
+
+$this->formAttributes = $this->attrs()
+  ->set('data-turbo', 'false')
+  ->mergeWith($this->formAttributes)
+;
+dump($this->formAttributes);

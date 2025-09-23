@@ -81,7 +81,7 @@ class EventRegistrationExportController extends AbstractBackendController implem
         return $this->render('@ContaoEventRegistration/be_event_registration_export.html.twig', [
             'headline' => $this->translator->trans('event_registration_export', ['event' => $event->title], 'im_contao_event_registration'),
             'backUrl' => System::getReferer(),
-            'form' => $form->generate(),
+            'form' => $form->generate('form_event_registration_export'),
             'messages' => Message::generate(),
         ]);
     }
