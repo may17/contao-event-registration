@@ -69,6 +69,7 @@ class EventRegistrationCancelController extends AbstractFrontendModuleController
                 throw new PageNotFoundException('No registration found.');
             }
 
+            $registration->previousCancelationState = $registration->cancelled;
             $registrations[] = $registration;
             $event = CalendarEventsModel::findById((int) $registration->pid);
             $template->event = $event;
@@ -90,7 +91,7 @@ class EventRegistrationCancelController extends AbstractFrontendModuleController
         };
 
         // Send notification
-        if ($model->nc_notification) {
+        if ($model->nc_notification && $registration->previousCancelationState === false) {
             $this->notificationCenter->sendNotification($model->nc_notification, $tokens);
         }
 
